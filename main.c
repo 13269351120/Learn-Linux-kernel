@@ -1,14 +1,14 @@
 int g(int x)
 {
-    return x+3;
+  return x + 10;
 }
 
 int f(int x)
 {
-    return g(x);
+  return g(x);
 }
 
 int main(void)
 {
-    return f(8)+1;
+  return f(20) + 8;
 }

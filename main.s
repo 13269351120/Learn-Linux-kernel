@@ -13,7 +13,7 @@ _g:                                     ## @g
 	pushl	%eax
 	movl	8(%ebp), %eax
 	movl	8(%ebp), %ecx
-	addl	$3, %ecx
+	addl	$10, %ecx
 	movl	%eax, -4(%ebp)          ## 4-byte Spill
 	movl	%ecx, %eax
 	addl	$4, %esp
@@ -53,12 +53,12 @@ _main:                                  ## @main
 	movl	%esp, %ebp
 	.cfi_def_cfa_register %ebp
 	subl	$24, %esp
-	movl	$8, %eax
+	movl	$20, %eax
 	movl	$0, -4(%ebp)
-	movl	$8, (%esp)
+	movl	$20, (%esp)
 	movl	%eax, -8(%ebp)          ## 4-byte Spill
 	calll	_f
-	addl	$1, %eax
+	addl	$8, %eax
 	addl	$24, %esp
 	popl	%ebp
 	retl
